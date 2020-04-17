@@ -1,11 +1,11 @@
-$(function() {
+$(function () {
 	var canvas = $('#canvas')[0];
 	canvas.width = $(window).width();
 	canvas.height = $(window).height();
 	var ctx = canvas.getContext('2d');
 
 	// resize
-	$(window).on('resize', function() {
+	$(window).on('resize', function () {
 		canvas.width = $(window).width();
 		canvas.height = $(window).height();
 		ctx.fillStyle = '#000003';
@@ -61,7 +61,7 @@ $(function() {
 	var listLaunchSound = $('audio.launch');
 
 	// define array position of text
-	var textString = 'happylunarnewyear2018';
+	var textString = '张宏,我好想你';
 	var textMatrix = [
 		4.5, 0, 5.5, 0, 6.5, 0, 7.5, 0, 8.5, 0,
 		0, 1, 1, 1, 2, 1, 3, 1, 4, 1, 6, 1, 7, 1, 8, 1, 10, 1, 11, 1, 12, 1, 13, 1,
@@ -175,7 +175,7 @@ $(function() {
 		//
 		lights.push({ x: center.x + left * 0.9, y: center.y + top, color: text.fill, radius: range * 2 });
 		if (++textIndex < textString.length) {
-			setTimeout(initText, 10);
+			setTimeout(initText, 100);
 		}
 		else {
 			textIndex = 0;
@@ -227,7 +227,7 @@ $(function() {
 	}
 
 	function playLaunchSound() {
-		setTimeout(function() {
+		setTimeout(function () {
 			var sound = listLaunchSound[Math.floor(Math.random() * listLaunchSound.length)];
 			sound.volume = 0.05;
 			sound.play();
@@ -353,7 +353,7 @@ $(function() {
 		max = fireNumber * 3;
 		color = '#ff9';
 		var rotate = Math.random() * Math.PI * 2;
-		var vx = velocity *  (Math.random() + 2);
+		var vx = velocity * (Math.random() + 2);
 		var vy = velocity * 0.6;
 		for (var i = 0; i < max; i++) {
 			var rad = (i * Math.PI * 2) / max;
@@ -824,7 +824,7 @@ $(function() {
 			// ctx.closePath();
 			// ctx.fill();
 			ctx.fillStyle = special.fill;
-			ctx.fillRect(special.x - special.size, special.y - special.size, special.size * 2, special.size *2);
+			ctx.fillRect(special.x - special.size, special.y - special.size, special.size * 2, special.size * 2);
 		}
 
 		for (var i = 0; i < listSpark.length; i++) {
@@ -835,7 +835,7 @@ $(function() {
 			// ctx.closePath();
 			// ctx.fill();
 			ctx.fillStyle = spark.fill;
-			ctx.fillRect(spark.x - spark.size, spark.y - spark.size, spark.size * 2, spark.size *2);
+			ctx.fillRect(spark.x - spark.size, spark.y - spark.size, spark.size * 2, spark.size * 2);
 		}
 
 		// light effect
