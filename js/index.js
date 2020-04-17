@@ -61,7 +61,7 @@ $(function () {
 	var listLaunchSound = $('audio.launch');
 
 	// define array position of text
-	var textString = '张宏,我好想你';
+	var textString = 'zhanghongimissyou';
 	var textMatrix = [
 		4.5, 0, 5.5, 0, 6.5, 0, 7.5, 0, 8.5, 0,
 		0, 1, 1, 1, 2, 1, 3, 1, 4, 1, 6, 1, 7, 1, 8, 1, 10, 1, 11, 1, 12, 1, 13, 1,
@@ -175,7 +175,7 @@ $(function () {
 		//
 		lights.push({ x: center.x + left * 0.9, y: center.y + top, color: text.fill, radius: range * 2 });
 		if (++textIndex < textString.length) {
-			setTimeout(initText, 100);
+			setTimeout(initText, 10);
 		}
 		else {
 			textIndex = 0;
